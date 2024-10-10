@@ -1,26 +1,32 @@
-'Welcome to Python Pizza Deliveries'
+print("Welcome to Python Pizza Deliveries")
 
-# Define pizza, pepperoni, and cheese prices
-pizza_prices = {'Small': 15, 'Medium': 20, 'Large': 25}
-pepperoni_prices = {'Small': 2, 'Medium': 3, 'Large': 5}
-cheese_price = 5
-
-# Prompt user for pizza size
-print("Pizza Sizes: Small, Medium, Large")
+# Define pizza prices
+print("pizza_size: Small, Medium, Large")
 pizza_size = input("Enter pizza size: \n")
 
 # Calculate pizza cost
-pizza_cost = pizza_prices[pizza_size]
+if pizza_size == "Small":
+    pizza_cost = 15
+elif pizza_size == "Medium":
+    pizza_cost = 20
+else:
+    pizza_cost = 25
 
 # Ask for pepperoni
 print("Add pepperoni? (yes/no)")
 pepperoni = input()
 if pepperoni == 'yes':
-    pepperoni_cost = pepperoni_prices[pizza_size]
+    if pizza_size == "Small":
+        pepperoni_cost = 2
+    elif pizza_size == "Medium":
+        pepperoni_cost = 3
+    else:
+        pepperoni_cost = 5
 else:
     pepperoni_cost = 0
 
 # Ask for cheese
+cheese_price = 5
 print("Add cheese? (yes/no)")
 cheese = input()
 if cheese == 'yes':
@@ -39,5 +45,6 @@ if pepperoni_cost > 0:
 if cheese_cost > 0:
     print("Cheese: $" + str(cheese_cost))
 print("Total: $" + str(total_cost))
+
 
 
