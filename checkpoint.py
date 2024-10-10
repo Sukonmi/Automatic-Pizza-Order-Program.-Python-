@@ -38,7 +38,7 @@ else:
 total_cost = pizza_cost + pepperoni_cost + cheese_cost
 
 # Display order summary
-print("\nOrder Summary:")
+print("\nOrder Summary: ")
 print("Pizza (" + pizza_size + "): $" + str(pizza_cost))
 if pepperoni_cost > 0:
     print("Pepperoni (" + pizza_size + "): $" + str(pepperoni_cost))
@@ -46,5 +46,6 @@ if cheese_cost > 0:
     print("Cheese: $" + str(cheese_cost))
 print("Total: $" + str(total_cost))
 
+print("Thank you for your patronage.")
 
 
